@@ -1,0 +1,15 @@
+*.zip
+*.o
+*.exe
+*.class
+*.pdf
+*.doc
+*.docx
+report
+.idea
+.vs
+.vscode
+*.bin
+*.ipch
+*.json
+out/production

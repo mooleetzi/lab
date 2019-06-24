@@ -1,0 +1,30 @@
+.logo-content {
+    font-size: 2rem;
+    text-shadow: 0 0 2px black;
+    color: white;
+    font-style: italic;
+    position: absolute;
+    /*top: 1vh;*/
+    left: 45%;
+}
+.logo-container{
+    padding-left: 10%;
+    position: relative;
+    height: 15vh;
+    overflow: hidden;
+}
+.url-container{
+    position: absolute;
+    color: #000;
+    margin-left: 20%;
+    top: 45%;
+    left: 45%;
+}
+.url-container li{
+    float: left;
+    list-style: none;
+}
+.url-container li a{
+    text-decoration: none;
+    color: gray;
+}

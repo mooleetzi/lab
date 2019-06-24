@@ -77,7 +77,7 @@ public:
                 b[i] -= a[i][k] * b[k];
         }
         b[n - 1] /= a[n - 1][n - 1];
-        debug();
+        //debug();
         for (int i = n - 2; i >= 0; i--)
         {
             double c1 = 1 / a[i][i];
@@ -101,3 +101,14 @@ int main(int argc, char const *argv[])
     g.print();
     return 0;
 }
+/*
+3
+1 2 3 1
+5 4 10 0
+3 -0.1 1 2
+
+3
+12 -3 3 15
+-18 3 -1 -15
+1 1 1 6
+ */

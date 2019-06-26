@@ -5,7 +5,7 @@
 </head>
 <body>
 <div class="register">
-    <form name="register" action="register" method="post">
+    <form name="register" action="register" method="post" enctype="multipart/form-data">
         <div>
             userName:<input type="text" name="username">
         </div>
@@ -15,21 +15,18 @@
         <div>
             passWord:<input type="password" name="passwordR">
         </div>
+        <div>
+            请选择头像:<input type="file" name="myFile">
+        </div>
         <button type="submit">注册</button>
-        <%
-//            try {
-//                int flag=(Integer)session.getAttribute("register");
-//                if (flag==0)
-//                    out.print("已存在用户");
-//                else if (flag==-1)
-//                    out.print("两次密码不一致");
-//                else if (flag==1)
-//                    out.print("注册成功");
-//            }catch (NullPointerException e){}
-
-        %>
     </form>
-
+    ${msg}
+    <%
+        String status[]={"注册成功","用户名不能为空","密码不能为空","两次密码应该一致","注册失败,请重试","已存在此用户"};
+        try {
+            out.print(status[(Integer)(session.getAttribute("register"))]);
+        }catch (Exception e){}
+    %>
 </div>
 </body>
 </html>

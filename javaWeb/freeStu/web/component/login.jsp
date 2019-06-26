@@ -14,7 +14,7 @@
                     info = c.getValue().split("#");
 
     %>
-    <form name="login" action="component/dologin.jsp" method="post">
+    <form name="login" action="component/dologin.jsp" method="post" onsubmit="return mySubmit()">
         login
         <div>
             userName:<input type="text" name="username" value="<%=info[0]%>">
@@ -23,24 +23,40 @@
             passWord:<input type="password" name="password" value="<%=info[1]%>">
         </div>
         <div>
+            verification:<input type="text" name="verification" id="verification">
+            <br>
+            <img name="image" src="component/validate.jsp" onclick="refresh()">
+        </div>
+        <div>
             两周内自动登录:
             <input type="checkbox" name="autologin" id="autologin">
         </div>
+
         <input type="submit" value="登录">
         <p>当前登录人数:<%=(Integer)application.getAttribute("loginCnt")==null?0:(Integer)application.getAttribute("loginCnt")%></p>
     </form>
     <%
+        String logstatus[]={"用户名不能为空","验证码错误","无此用户","密码错误","登录成功"};
         try {
-            int flag=(Integer)session.getAttribute("login");
-            if (flag==1)
-                out.print("登录成功");
-            else if (flag==0)
-                out.print("密码错误");
-            else if (flag==-1)
-                out.print("账号不存在");
+            Integer flag=(Integer)session.getAttribute("login");
+            out.print(logstatus[flag]);
         }catch (NullPointerException e){}
 
     %>
 </div>
+<script type="text/javascript">
+    function refresh() {
+        login.image.src="component/validate.jsp?"+new Date();
+    }
+    function mySubmit() {
+        let v=document.getElementById("verification").value;
+        if (v==undefined||v.length==0) {
+            alert("请先输入验证码");
+            return false;
+        }
+        else
+            return true;
+    }
+</script>
 </body>
 </html>

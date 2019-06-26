@@ -18,6 +18,10 @@
     transition: all 1s ease-in-out;
     position: absolute;
 }
+.slide-item img{
+    width: 80vw;
+    height: 80vh;
+}
 .not-show{
     opacity: 0;
 }

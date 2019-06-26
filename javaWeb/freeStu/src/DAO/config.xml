@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dbconfig>
+    <base>
+        <driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</driver>
+        <url>jdbc:sqlserver://127.0.0.1:1433;DatabaseName=javaWebDb</url>
+        <user>sa</user>
+        <password>sqlserver2017</password>
+    </base>
+    <operation>
+        <select>
+            <sql>select * from userTable where username=?</sql>
+            <text>select.csv</text>
+        </select>
+        <insert>
+            <sql>insert into userTable values (?,?,?)</sql>
+            <text>insert.csv</text>
+        </insert>
+        <update>
+            <sql>update userTable set password=? where username=?</sql>
+            <text>update.csv</text>
+        </update>
+    </operation>
+</dbconfig>

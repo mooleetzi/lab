@@ -1,5 +1,13 @@
 package myServlet;
 
+import DAO.UserDao;
+import VO.User;
+import com.jspsmart.upload.File;
+import com.jspsmart.upload.SmartUpload;
+import com.jspsmart.upload.SmartUploadException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -7,68 +15,68 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.security.NoSuchAlgorithmException;
 import java.sql.*;
 public class registerSheetFormat extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String username=req.getParameter("username");
-        String password=req.getParameter("password");
-        String passwordR=req.getParameter("passwordR");
-        PrintWriter out=resp.getWriter();
+        SmartUpload smartUpload=new SmartUpload();
+        ServletConfig config=this.getServletConfig();
+        smartUpload.initialize(config,req,resp);
+        File smartfile=null;
+        try {
+            smartUpload.upload();
+            smartfile=smartUpload.getFiles().getFile(0);
+            smartfile.saveAs("C:\\code\\lab\\javaWeb\\freeStu\\web\\uploadFile\\"+smartfile.getFileName(),smartUpload.SAVE_PHYSICAL);
+            System.out.println(smartfile.getFileName());
+        }catch (SmartUploadException e){
+            System.out.println("上传失败"+smartfile.getFileName());
+            e.printStackTrace();
+
+        }
+        String msg="上传成功";
+        req.setAttribute("msg",msg);
+        String username=smartUpload.getRequest().getParameter("username");
+        String password=smartUpload.getRequest().getParameter("password");
+        String passwordR=smartUpload.getRequest().getParameter("passwordR");
+        int regis=-1;
         if (username==null||username.isEmpty()) {
-            out.println("用户名不能为空");
+            regis = 1;
+            req.getSession().setAttribute("register",regis);
+            resp.sendRedirect("index.jsp");
             return;
         }
-        if (password==null||password.isEmpty()){
-            out.println("密码不能为空");
+        if (password==null||password.isEmpty()) {
+            regis = 2;
+            req.getSession().setAttribute("register",regis);
+            resp.sendRedirect("index.jsp");
             return;
         }
-        if (passwordR==null||!password.equals(passwordR)){
-            out.println("两次密码应该一致");
+        if (passwordR==null||!password.equals(passwordR)) {
+            regis = 3;
+            req.getSession().setAttribute("register",regis);
+            resp.sendRedirect("index.jsp");
             return;
         }
-        String JDriver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        String connectDB = "jdbc:sqlserver://127.0.0.1:1433;DatabaseName=javaWebDb";
-        try {
-            Class.forName(JDriver);
-            String user = "sa";
-            String pass = "sqlserver2017";
-            Connection con = DriverManager.getConnection(connectDB, user, pass);
-            Statement cmd = con.createStatement();
-            PreparedStatement psm = con.prepareStatement("select * from userTable where username=?");
-            psm.setString(1,username);
-            ResultSet rs=psm.executeQuery();
-            if (rs.next()){
-                out.println("已存在用户"+username);
-                return;
+        UserDao userDao=new UserDao();
+        User user=userDao.findByUsername(username);
+        boolean flag=false;
+        if (user==null){
+            try {
+                flag=userDao.insert(username,password,smartfile==null?"":smartfile.getFileName());
+                if (flag)
+                    regis=0;
+                else
+                    regis=4;
+            }catch (NoSuchAlgorithmException e){
+                e.printStackTrace();
             }
-        }catch (ClassNotFoundException e){
-            out.println("查询信息失败，请重试");
-            return;
         }
-        catch (SQLException e){
-            out.println("查询信息失败，请重试");
-            return;
-        }
-        try {
-            Class.forName(JDriver);
-            String user = "sa";
-            String pass = "sqlserver2017";
-            Connection con = DriverManager.getConnection(connectDB, user, pass);
-            Statement cmd = con.createStatement();
-            PreparedStatement ps = con.prepareStatement("insert into userTable values (?,?)");
-            ps.setString(1,username);
-            ps.setString(2,password);
-            ps.executeUpdate();
-        }catch (ClassNotFoundException e){
-            out.println("插入信息失败，请重试");
-            return;
-        }
-        catch (SQLException e){
-            out.println("插入信息失败，请重试");
-            return;
-        }
-        out.println("注册成功");
+        else
+            regis=5;
+//        RequestDispatcher rd=req.getRequestDispatcher("register.jsp");
+        req.getSession().setAttribute("register",regis);
+        resp.sendRedirect("index.jsp");
     }
 
     @Override

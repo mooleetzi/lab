@@ -8,6 +8,7 @@
 <head>
     <title>InfoCenter</title>
     <link href="static/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
 <%@include file="component/header.jsp" %>
@@ -24,8 +25,10 @@
     <div class="slide-container">
     </div>
 </div>
-<script src="static/js/index.js">
+<script type="text/javascript">
 </script>
 <%@include file="component/footer.jsp" %>
 </body>
+<script src="static/js/index.js">
+</script>
 </html>

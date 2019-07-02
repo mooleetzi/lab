@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" import="java.sql.*" %>
-<%!String bgc = "cyan";%>
+<%!String bgc = "lightblue";%>
 <% String cur = request.getParameter("bgc");
     if (cur != null && !cur.isEmpty())
         bgc = cur;

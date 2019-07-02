@@ -27,7 +27,7 @@ public class registerSheetFormat extends HttpServlet {
         try {
             smartUpload.upload();
             smartfile=smartUpload.getFiles().getFile(0);
-            smartfile.saveAs("C:\\code\\lab\\javaWeb\\freeStu\\web\\uploadFile\\"+smartfile.getFileName(),smartUpload.SAVE_PHYSICAL);
+            smartfile.saveAs("/uploadFile/"+smartfile.getFileName(),smartUpload.SAVE_VIRTUAL);
             System.out.println(smartfile.getFileName());
         }catch (SmartUploadException e){
             System.out.println("上传失败"+smartfile.getFileName());
@@ -76,6 +76,7 @@ public class registerSheetFormat extends HttpServlet {
             regis=5;
 //        RequestDispatcher rd=req.getRequestDispatcher("register.jsp");
         req.getSession().setAttribute("register",regis);
+//        rd.forward(req,resp);
         resp.sendRedirect("index.jsp");
     }
 

@@ -23,7 +23,7 @@ public class download extends HttpServlet {
             e.printStackTrace();
         }
         System.out.println(path);
-        resp.sendRedirect("index.jsp");
+//        resp.sendRedirect("index.jsp");
     }
 
     @Override

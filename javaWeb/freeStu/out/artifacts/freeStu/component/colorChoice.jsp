@@ -6,12 +6,11 @@
 <body>
 <p>请选择背景颜色</p>
 <form action="index.jsp" method="post">
-    cyan
-    <input type="radio" value="cyan" name="bgc">
-    yellow
-    <input type="radio" value="yellow" name="bgc">
-    pink
-    <input type="radio" value="pink" name="bgc">
+    <select name="bgc">
+        <option value="cyan">cyan</option>
+        <option value="grey">grey</option>
+        <option value="lightblue" selected>lightblue</option>
+    </select>
     <input type="submit" value="确定">
 </form>
 </body>

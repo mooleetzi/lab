@@ -24,3 +24,10 @@ function autoPlay() {
     timeId = setInterval(play, 2000);
 }
 autoPlay();
+
+function login() {
+    location.href="component/login.jsp";
+}
+function register() {
+    location.href="component/register.jsp";
+}

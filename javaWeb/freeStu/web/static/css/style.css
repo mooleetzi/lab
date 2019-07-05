@@ -9,7 +9,7 @@
 .slide-container {
     height: 80vh;
     width: 80vw;
-    padding-left: 10vw;
+    margin-left: 10vw;
     overflow: hidden;
     position: relative;
 }

@@ -14,12 +14,12 @@
     String rndAns=session.getAttribute("rndAns").toString();
     if (username==null||username.isEmpty()) {
         session.setAttribute("login",0);//用户名不为空
-        response.sendRedirect("./../index.jsp");
+        response.sendRedirect("login.jsp");
         return;
     }
     if (!rndAns.equals(verification)){
         session.setAttribute("login",1);//验证码错误
-        response.sendRedirect("./../index.jsp");
+        response.sendRedirect("login.jsp");
         return;
     }
     int flag=-1;
@@ -46,9 +46,11 @@
         response.addCookie(ck);
     }
     session.setAttribute("login",flag);
-    session.setAttribute("username",user.getUsername());
-    session.setAttribute("icon",user.getIcon());
-    response.sendRedirect("./../index.jsp");
+    if (flag==4) {
+        session.setAttribute("username", user.getUsername());
+        session.setAttribute("icon", user.getIcon());
+    }
+    response.sendRedirect("login.jsp?login="+flag);
 %>
 </body>
 </html>

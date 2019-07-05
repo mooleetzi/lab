@@ -2,16 +2,16 @@
 <html>
 <head>
     <title>Title</title>
+    <link href="/freeStu/static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<p>请选择背景颜色</p>
 <form action="index.jsp" method="post">
-    <select name="bgc">
+    <select class="form-control-static" name="bgc">
         <option value="cyan">cyan</option>
         <option value="grey">grey</option>
         <option value="lightblue" selected>lightblue</option>
     </select>
-    <input type="submit" value="确定">
+    <input class="btn btn-default" type="submit" value="确定">
 </form>
 </body>
 </html>

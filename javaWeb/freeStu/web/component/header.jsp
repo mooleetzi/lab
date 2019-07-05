@@ -13,6 +13,9 @@
         <img src="static/img/logo.png" width="156" height="156">
         <ul class="url-container">
             <li>
+                <a href="page/imgdisplay.jsp">创意空间</a>
+            </li>
+            <li>
                 <a href="page/person.jsp">个人中心</a>
             </li>
         </ul>

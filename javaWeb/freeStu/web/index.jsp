@@ -9,6 +9,7 @@
     <title>InfoCenter</title>
     <link href="static/css/style.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 </head>
 <body>
 <%@include file="component/header.jsp" %>
@@ -16,17 +17,12 @@
     <div class="option">
         <%@include file="component/colorChoice.jsp"%>
     </div>
-    <div class="my-login">
-        <%@include file="component/login.jsp"%>
-    </div>
-    <div class="my-register">
-        <%@include file="component/register.jsp"%>
-    </div>
+    <p>当前在线人数:<%=(Integer)application.getAttribute("loginCnt")==null?0:(Integer)application.getAttribute("loginCnt")%></p>
+    <button class="btn btn-default" onclick="login()">登录</button>
+    <button class="btn btn-default" onclick="register()">注册</button>
     <div class="slide-container">
     </div>
 </div>
-<script type="text/javascript">
-</script>
 <%@include file="component/footer.jsp" %>
 </body>
 <script src="static/js/index.js">

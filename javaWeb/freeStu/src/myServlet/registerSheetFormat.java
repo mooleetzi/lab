@@ -32,7 +32,6 @@ public class registerSheetFormat extends HttpServlet {
         }catch (SmartUploadException e){
             System.out.println("上传失败"+smartfile.getFileName());
             e.printStackTrace();
-
         }
         String msg="上传成功";
         req.setAttribute("msg",msg);
@@ -43,19 +42,19 @@ public class registerSheetFormat extends HttpServlet {
         if (username==null||username.isEmpty()) {
             regis = 1;
             req.getSession().setAttribute("register",regis);
-            resp.sendRedirect("index.jsp");
+            resp.sendRedirect("/freeStu/component/register.jsp?register="+regis);
             return;
         }
         if (password==null||password.isEmpty()) {
             regis = 2;
             req.getSession().setAttribute("register",regis);
-            resp.sendRedirect("index.jsp");
+            resp.sendRedirect("/freeStu/component/register.jsp?register="+regis);
             return;
         }
         if (passwordR==null||!password.equals(passwordR)) {
             regis = 3;
             req.getSession().setAttribute("register",regis);
-            resp.sendRedirect("index.jsp");
+            resp.sendRedirect("/freeStu/component/register.jsp?register="+regis);
             return;
         }
         UserDao userDao=new UserDao();
@@ -74,10 +73,8 @@ public class registerSheetFormat extends HttpServlet {
         }
         else
             regis=5;
-//        RequestDispatcher rd=req.getRequestDispatcher("register.jsp");
         req.getSession().setAttribute("register",regis);
-//        rd.forward(req,resp);
-        resp.sendRedirect("index.jsp");
+        resp.sendRedirect("/freeStu/component/register.jsp?register="+regis);
     }
 
     @Override

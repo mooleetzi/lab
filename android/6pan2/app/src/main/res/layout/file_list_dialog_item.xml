@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+    >
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_folder"
+            android:id="@+id/fileDialogIcon"
+            android:layout_marginTop="10dp"
+            />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/fileDialogName"
+                android:layout_toRightOf="@+id/fileDialogIcon"
+                android:paddingTop="15dp"
+                android:text="文件名"
+                android:textSize="8sp"
+                android:gravity="center"
+                >
+
+            </TextView>
+
+</LinearLayout>

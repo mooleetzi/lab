@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/round_white"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="选择路径"
+        android:textSize="20sp"
+        android:id="@+id/fileChooseTitle"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dialogFileList"
+        >
+    </ListView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/move"
+        android:textSize="20sp"
+        android:id="@+id/fileChooseCancel"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        />
+</LinearLayout>

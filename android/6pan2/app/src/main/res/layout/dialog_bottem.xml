@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/colorPrimary"
+    >
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="@string/file_download"
+        android:textSize="20sp"
+        android:id="@+id/file_download"
+        android:gravity="center"
+        android:textColor="@color/bg_white"
+
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/file_delete"
+        android:textSize="20sp"
+        android:text="@string/file_delete"
+        android:gravity="center"
+        android:textColor="@color/bg_white"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:textSize="20sp"
+        android:id="@+id/file_opration_more"
+        android:text="@string/file_operation_more"
+        android:gravity="center"
+        android:textColor="@color/bg_white"
+
+        />
+</LinearLayout>

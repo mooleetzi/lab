@@ -1,0 +1,513 @@
+@startuml
+
+title __BEAN's Class Diagram__\n
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.File {
+          {static} + COMPLEATED : int
+          {static} + DOWNLOADING : int
+          {static} + ERROR : int
+          {static} + PAUSING : int
+          - atime : long
+          - children : List<File>
+          - createTime : String
+          - ctime : long
+          - deleteTime : Long
+          - directory : boolean
+          - downloadAddress : String
+          - downloadIdentity : String
+          - downloadSize : long
+          - downloadState : int
+          - ext : String
+          - fileIndex : int
+          - finish : boolean
+          - flag : int
+          - hash : String
+          - id : long
+          - identity : String
+          - ignoreCase : Boolean
+          - isChecked : boolean
+          - isDownload : boolean
+          - locking : Boolean
+          - mime : String
+          - mtime : long
+          - name : String
+          - op : Integer
+          - parent : String
+          - path : String
+          - pathIdentity : String
+          - preview : Boolean
+          - previewType : Integer
+          - progress : int
+          - share : Boolean
+          - size : Long
+          - source : String
+          - status : int
+          - storeIdentity : String
+          - type : Integer
+          - uniqueIdentity : String
+          - userIdentity : Integer
+          - version : Integer
+          + getAtime()
+          + getChecked()
+          + getChildren()
+          + getCreateTime()
+          + getCtime()
+          + getDeleteTime()
+          + getDirectory()
+          + getDownload()
+          + getDownloadAddress()
+          + getDownloadIdentity()
+          + getDownloadSize()
+          + getDownloadState()
+          + getExt()
+          + getFileIndex()
+          + getFlag()
+          + getHash()
+          {static} + getIcon()
+          + getId()
+          + getIdentity()
+          + getIgnoreCase()
+          + getLocking()
+          + getMime()
+          + getMtime()
+          + getName()
+          + getOp()
+          + getParent()
+          + getPath()
+          + getPathIdentity()
+          + getPreview()
+          + getPreviewType()
+          + getProgress()
+          + getShare()
+          + getSize()
+          {static} + getSize()
+          + getSource()
+          + getStatus()
+          + getStoreIdentity()
+          {static} + getTime()
+          + getType()
+          + getUniqueIdentity()
+          + getUserIdentity()
+          + getVersion()
+          + isFinish()
+          + setAtime()
+          + setChecked()
+          + setChildren()
+          + setCreateTime()
+          + setCtime()
+          + setDeleteTime()
+          + setDirectory()
+          + setDownload()
+          + setDownloadAddress()
+          + setDownloadIdentity()
+          + setDownloadSize()
+          + setDownloadState()
+          + setExt()
+          + setFileIndex()
+          + setFinish()
+          + setFlag()
+          + setHash()
+          + setId()
+          + setIdentity()
+          + setIgnoreCase()
+          + setLocking()
+          + setMime()
+          + setMtime()
+          + setName()
+          + setOp()
+          + setParent()
+          + setPath()
+          + setPathIdentity()
+          + setPreview()
+          + setPreviewType()
+          + setProgress()
+          + setShare()
+          + setSize()
+          + setSource()
+          + setStatus()
+          + setStoreIdentity()
+          + setType()
+          + setUniqueIdentity()
+          + setUserIdentity()
+          + setVersion()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.FileList {
+          # list : List<File>
+          + getList()
+          + getParent()
+          + setList()
+          + setParent()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.FileListPage {
+          - page : Integer
+          - pageSize : Integer
+          - totalCount : Integer
+          - totalPage : Integer
+          + getPage()
+          + getPageSize()
+          + getTotalCount()
+          + getTotalPage()
+          + setPage()
+          + setPageSize()
+          + setTotalCount()
+          + setTotalPage()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.Offline {
+          - count : int
+          - success : boolean
+          + getCount()
+          + isSuccess()
+          + setCount()
+          + setSuccess()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.OfflinePre {
+          - files : List<File>
+          - identity : String
+          - name : String
+          - size : long
+          + getFiles()
+          + getIdentity()
+          + getName()
+          + getSize()
+          + setFiles()
+          + setIdentity()
+          + setName()
+          + setSize()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.OfflineTask {
+          - accessPath : String
+          - createIp : String
+          - createTime : long
+          - data : String
+          - downloadSize : long
+          - errorCode : int
+          - errorMessage : String
+          - fileMime : String
+          - fileType : int
+          - identity : String
+          - name : String
+          - progress : int
+          - savePath : String
+          - size : long
+          - status : int
+          - type : int
+          - userIdentity : int
+          + getAccessPath()
+          + getCreateIp()
+          + getCreateTime()
+          + getData()
+          + getDownloadSize()
+          + getErrorCode()
+          + getErrorMessage()
+          + getFileMime()
+          + getFileType()
+          + getIdentity()
+          + getName()
+          + getProgress()
+          + getSavePath()
+          + getSize()
+          + getStatus()
+          + getType()
+          + getUserIdentity()
+          + setAccessPath()
+          + setCreateIp()
+          + setCreateTime()
+          + setData()
+          + setDownloadSize()
+          + setErrorCode()
+          + setErrorMessage()
+          + setFileMime()
+          + setFileType()
+          + setIdentity()
+          + setName()
+          + setProgress()
+          + setSavePath()
+          + setSize()
+          + setStatus()
+          + setType()
+          + setUserIdentity()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.OfflineTaskPage {
+          - list : List<OfflineTask>
+          - page : int
+          - pageSize : int
+          - totalCount : int
+          - totalPage : int
+          + getList()
+          + getPage()
+          + getPageSize()
+          + getTotalCount()
+          + getTotalPage()
+          + setList()
+          + setPage()
+          + setPageSize()
+          + setTotalCount()
+          + setTotalPage()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.Person {
+          - countryCode : String
+          - createIP : String
+          - createTime : String
+          - email : String
+          - icon : String
+          - identity : long
+          - name : String
+          - phone : String
+          - spaceCapacity : Long
+          - spaceUsed : Long
+          - ssid : int
+          - status : int
+          - type : int
+          - version : int
+          + getCountryCode()
+          + getCreateIP()
+          + getCreateTime()
+          + getEmail()
+          + getIcon()
+          + getIdentity()
+          + getName()
+          + getPhone()
+          + getSpaceCapacity()
+          + getSpaceUsed()
+          + getSsid()
+          + getStatus()
+          + getType()
+          + getVersion()
+          + setCountryCode()
+          + setCreateIP()
+          + setCreateTime()
+          + setEmail()
+          + setIcon()
+          + setIdentity()
+          + setName()
+          + setPhone()
+          + setSpaceCapacity()
+          + setSpaceUsed()
+          + setSsid()
+          + setStatus()
+          + setType()
+          + setVersion()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.Result {
+          # code : String
+          # message : String
+          # status : int
+          # success : Boolean
+          + getCode()
+          + getMessage()
+          + getStatus()
+          + getSuccess()
+          + setCode()
+          + setMessage()
+          + setStatus()
+          + setSuccess()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.ResultChangeName {
+          - result : Boolean
+          + getResult()
+          + setResult()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.ResultDelOffline {
+          - result : int
+          + getResult()
+          + setResult()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.ResultFile {
+          + getResult()
+          + setResult()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.ResultFilePage {
+          + getResult()
+          + setResult()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.ResultFileSingle {
+          + getResult()
+          + setResult()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.ResultOffline {
+          + getResult()
+          + setResult()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.ResultOfflinePre {
+          - result : List<OfflinePre>
+          + getResult()
+          + setResult()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.ResultOfflineTaskPage {
+          + getResult()
+          + setResult()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.ResultPerson {
+          + getResult()
+          + setResult()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.ResultSendMessage {
+          - result : String
+          + getResult()
+          + setResult()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.User {
+          - captcha : String
+          - password : String
+          - password2 : String
+          - remember : Boolean
+          - username : String
+          + getCaptcha()
+          + getPassword()
+          + getPassword2()
+          + getRemember()
+          + getUsername()
+          + setCaptcha()
+          + setPassword()
+          + setPassword2()
+          + setRemember()
+          + setUsername()
+      }
+    }
+  }
+  
+
+  cn.cdut.a6pan.Bean.FileList o-- cn.cdut.a6pan.Bean.File : parent
+  cn.cdut.a6pan.Bean.FileListPage -up-|> cn.cdut.a6pan.Bean.FileList
+  cn.cdut.a6pan.Bean.ResultChangeName -up-|> cn.cdut.a6pan.Bean.Result
+  cn.cdut.a6pan.Bean.ResultDelOffline -up-|> cn.cdut.a6pan.Bean.Result
+  cn.cdut.a6pan.Bean.ResultFile -up-|> cn.cdut.a6pan.Bean.Result
+  cn.cdut.a6pan.Bean.ResultFile o-- cn.cdut.a6pan.Bean.FileList : result
+  cn.cdut.a6pan.Bean.ResultFilePage -up-|> cn.cdut.a6pan.Bean.Result
+  cn.cdut.a6pan.Bean.ResultFilePage o-- cn.cdut.a6pan.Bean.FileListPage : result
+  cn.cdut.a6pan.Bean.ResultFileSingle -up-|> cn.cdut.a6pan.Bean.Result
+  cn.cdut.a6pan.Bean.ResultFileSingle o-- cn.cdut.a6pan.Bean.File : result
+  cn.cdut.a6pan.Bean.ResultOffline -up-|> cn.cdut.a6pan.Bean.Result
+  cn.cdut.a6pan.Bean.ResultOffline o-- cn.cdut.a6pan.Bean.Offline : result
+  cn.cdut.a6pan.Bean.ResultOfflinePre -up-|> cn.cdut.a6pan.Bean.Result
+  cn.cdut.a6pan.Bean.ResultOfflineTaskPage -up-|> cn.cdut.a6pan.Bean.Result
+  cn.cdut.a6pan.Bean.ResultOfflineTaskPage o-- cn.cdut.a6pan.Bean.OfflineTaskPage : result
+  cn.cdut.a6pan.Bean.ResultPerson -up-|> cn.cdut.a6pan.Bean.Result
+  cn.cdut.a6pan.Bean.ResultPerson o-- cn.cdut.a6pan.Bean.Person : result
+  cn.cdut.a6pan.Bean.ResultSendMessage -up-|> cn.cdut.a6pan.Bean.Result
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

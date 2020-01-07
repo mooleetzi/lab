@@ -1,0 +1,229 @@
+@startuml
+
+title __FRAGMENT's Class Diagram__\n
+
+  namespace cn.cdut.a6pan {
+    namespace ui.main {
+      namespace fragment {
+        class cn.cdut.a6pan.ui.main.fragment.DownloadFragment {
+            {static} ~ TAG : String
+            - allFiles : LiveData<List<File>>
+            - datalist : List<File>
+            - handler : Handler
+            {static} + newInstance()
+            + onActivityCreated()
+            + onCreateView()
+            + onDestroy()
+            + onRefresh()
+            - unRegisterObserver()
+        }
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace ui.main {
+      namespace fragment {
+        class cn.cdut.a6pan.ui.main.fragment.FileFragment {
+            {static} - TAG : String
+            - download : LiveData<List<File>>
+            - handler : Handler
+            - preFileOp : int
+            - set : HashSet<Integer>
+            + OnCenterItemClick()
+            + OnCenterItemClick()
+            + OnCenterItemClick()
+            + clickItem()
+            + copyFile()
+            + deleteFile()
+            + download()
+            + downloadByURL()
+            + dowoloadSingle()
+            + dp2px()
+            + moveFile()
+            {static} + newInstance()
+            + onActivityCreated()
+            + onCheckChanged()
+            + onCreateView()
+            + onLongClick()
+            + onRefresh()
+            + onStop()
+            + openWarning()
+            - listener()
+            - loadData()
+            - requestPermission()
+        }
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace ui.main {
+      namespace fragment {
+        class cn.cdut.a6pan.ui.main.fragment.FileFragment.InsertAsyncTask {
+            + InsertAsyncTask()
+            # doInBackground()
+        }
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace ui.main {
+      namespace fragment {
+        class cn.cdut.a6pan.ui.main.fragment.FileFragment.QueryAsyncTask {
+            + QueryAsyncTask()
+            # doInBackground()
+        }
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace ui.main {
+      namespace fragment {
+        class cn.cdut.a6pan.ui.main.fragment.OfflineFragment {
+            {static} - TAG : String
+            - handler : Handler
+            - list : List<OfflineTask>
+            - offlineTaskLiveData : LiveData<PagedList<OfflineTask>>
+            {static} + newInstance()
+            + onActivityCreated()
+            + onCreateView()
+            + onRefresh()
+            + onStart()
+            - loadData()
+        }
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace ui.main {
+      namespace fragment {
+        class cn.cdut.a6pan.ui.main.fragment.SettingFragment {
+            {static} - TAG : String
+            - data : List<HashMap>
+            + logout()
+            + modifyPwd()
+            {static} + newInstance()
+            + onAttach()
+            + onClick()
+            + onCreate()
+            + onCreateView()
+            + openDialog()
+            + putData()
+            - about()
+            - feedBack()
+            - flushUser()
+            - modifyUsername()
+            - privacyPolicy()
+            - sendFeedBack()
+            - update()
+        }
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace ui.main {
+      namespace fragment {
+        class cn.cdut.a6pan.ui.main.fragment.SettingFragment.MyHandler {
+            ~ context : Context
+            + MyHandler()
+            + handleMessage()
+        }
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace ui.main {
+      namespace fragment {
+        class cn.cdut.a6pan.ui.main.fragment.TransmissionFragment {
+            {static} + newInstance()
+            + onActivityCreated()
+            + onCreateView()
+        }
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace ui.main {
+      namespace fragment {
+        class cn.cdut.a6pan.ui.main.fragment.UploadFragment {
+            {static} + newInstance()
+            + onActivityCreated()
+            + onCreateView()
+        }
+      }
+    }
+  }
+  
+
+  cn.cdut.a6pan.ui.main.fragment.DownloadFragment .up.|> androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener
+  cn.cdut.a6pan.ui.main.fragment.DownloadFragment -up-|> androidx.fragment.app.Fragment
+  cn.cdut.a6pan.ui.main.fragment.DownloadFragment o-- cn.cdut.a6pan.Adapter.MyDownloadAdapter : adapter
+  cn.cdut.a6pan.ui.main.fragment.DownloadFragment o-- cn.cdut.a6pan.databinding.FragmentDownloadBinding : binding
+  cn.cdut.a6pan.ui.main.fragment.DownloadFragment o-- cn.cdut.a6pan.ui.main.DownloadContentObserver : downloadContentObserver
+  cn.cdut.a6pan.ui.main.fragment.DownloadFragment o-- cn.cdut.a6pan.DAO.FileDao : fileDao
+  cn.cdut.a6pan.ui.main.fragment.DownloadFragment o-- cn.cdut.a6pan.DataBase.FileDataBase : fileDataBase
+  cn.cdut.a6pan.ui.main.fragment.DownloadFragment o-- cn.cdut.a6pan.ui.main.viewmodel.TransmissionViewModel : viewModel
+  cn.cdut.a6pan.ui.main.fragment.FileFragment .up.|> androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener
+  cn.cdut.a6pan.ui.main.fragment.FileFragment .up.|> cn.cdut.a6pan.Adapter.MyPagedListAdapter.FileChooseListener
+  cn.cdut.a6pan.ui.main.fragment.FileFragment .up.|> cn.cdut.a6pan.Dialog.MyBottemChooseDialog.OnCenterItemClickListener
+  cn.cdut.a6pan.ui.main.fragment.FileFragment .up.|> cn.cdut.a6pan.Dialog.MyBottemDialog.OnCenterItemClickListener
+  cn.cdut.a6pan.ui.main.fragment.FileFragment .up.|> cn.cdut.a6pan.Dialog.MyBottemFileChooseDialog.OnCenterItemClickListener
+  cn.cdut.a6pan.ui.main.fragment.FileFragment -up-|> androidx.fragment.app.Fragment
+  cn.cdut.a6pan.ui.main.fragment.FileFragment o-- cn.cdut.a6pan.Adapter.MyPagedListAdapter : adapter
+  cn.cdut.a6pan.ui.main.fragment.FileFragment o-- cn.cdut.a6pan.Dialog.BackUpStopDialog : backUpStopDialog
+  cn.cdut.a6pan.ui.main.fragment.FileFragment o-- cn.cdut.a6pan.databinding.FileFragmentBinding : binding
+  cn.cdut.a6pan.ui.main.fragment.FileFragment o-- cn.cdut.a6pan.DAO.FileDao : fileDao
+  cn.cdut.a6pan.ui.main.fragment.FileFragment o-- cn.cdut.a6pan.DataBase.FileDataBase : fileDataBase
+  cn.cdut.a6pan.ui.main.fragment.FileFragment o-- cn.cdut.a6pan.ui.main.viewmodel.FileViewModel : mViewModel
+  cn.cdut.a6pan.ui.main.fragment.FileFragment o-- cn.cdut.a6pan.Dialog.MyBottemChooseDialog : myBottemChooseDialog
+  cn.cdut.a6pan.ui.main.fragment.FileFragment o-- cn.cdut.a6pan.Dialog.MyBottemDialog : myBottemDialog
+  cn.cdut.a6pan.ui.main.fragment.FileFragment o-- cn.cdut.a6pan.Dialog.MyBottemFileChooseDialog : myBottemFileChooseDialog
+  cn.cdut.a6pan.ui.main.fragment.FileFragment +-down- cn.cdut.a6pan.ui.main.fragment.FileFragment.InsertAsyncTask
+  cn.cdut.a6pan.ui.main.fragment.FileFragment +-down- cn.cdut.a6pan.ui.main.fragment.FileFragment.QueryAsyncTask
+  cn.cdut.a6pan.ui.main.fragment.FileFragment.InsertAsyncTask -up-|> android.os.AsyncTask
+  cn.cdut.a6pan.ui.main.fragment.FileFragment.InsertAsyncTask o-- cn.cdut.a6pan.DAO.FileDao : fileDao
+  cn.cdut.a6pan.ui.main.fragment.FileFragment.QueryAsyncTask -up-|> android.os.AsyncTask
+  cn.cdut.a6pan.ui.main.fragment.FileFragment.QueryAsyncTask o-- cn.cdut.a6pan.DAO.FileDao : fileDao
+  cn.cdut.a6pan.ui.main.fragment.OfflineFragment .up.|> androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener
+  cn.cdut.a6pan.ui.main.fragment.OfflineFragment -up-|> androidx.fragment.app.Fragment
+  cn.cdut.a6pan.ui.main.fragment.OfflineFragment o-- cn.cdut.a6pan.Adapter.MyOfflineAdapter : adapter
+  cn.cdut.a6pan.ui.main.fragment.OfflineFragment o-- cn.cdut.a6pan.databinding.FragmentOfflineBinding : binding
+  cn.cdut.a6pan.ui.main.fragment.OfflineFragment o-- cn.cdut.a6pan.ui.main.viewmodel.TransmissionViewModel : viewModel
+  cn.cdut.a6pan.ui.main.fragment.SettingFragment .up.|> android.view.View.OnClickListener
+  cn.cdut.a6pan.ui.main.fragment.SettingFragment -up-|> androidx.fragment.app.Fragment
+  cn.cdut.a6pan.ui.main.fragment.SettingFragment o-- cn.cdut.a6pan.Adapter.MySettingListAdapter : adapter
+  cn.cdut.a6pan.ui.main.fragment.SettingFragment o-- cn.cdut.a6pan.databinding.SettingFragmentBinding : binding
+  cn.cdut.a6pan.ui.main.fragment.SettingFragment o-- cn.cdut.a6pan.ui.main.fragment.SettingFragment.MyHandler : handler
+  cn.cdut.a6pan.ui.main.fragment.SettingFragment +-down- cn.cdut.a6pan.ui.main.fragment.SettingFragment.MyHandler
+  cn.cdut.a6pan.ui.main.fragment.SettingFragment.MyHandler -up-|> android.os.Handler
+  cn.cdut.a6pan.ui.main.fragment.SettingFragment.MyHandler o-- cn.cdut.a6pan.databinding.SettingFragmentBinding : binding
+  cn.cdut.a6pan.ui.main.fragment.SettingFragment.MyHandler o-- cn.cdut.a6pan.ui.main.fragment.SettingFragment : fragment
+  cn.cdut.a6pan.ui.main.fragment.TransmissionFragment -up-|> androidx.fragment.app.Fragment
+  cn.cdut.a6pan.ui.main.fragment.TransmissionFragment o-- cn.cdut.a6pan.databinding.TransmissionFragmentBinding : binding
+  cn.cdut.a6pan.ui.main.fragment.TransmissionFragment o-- cn.cdut.a6pan.ui.main.viewmodel.TransmissionViewModel : mViewModel
+  cn.cdut.a6pan.ui.main.fragment.UploadFragment -up-|> androidx.fragment.app.Fragment
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

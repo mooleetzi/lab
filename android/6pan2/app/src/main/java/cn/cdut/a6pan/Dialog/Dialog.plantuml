@@ -1,0 +1,151 @@
+@startuml
+
+title __DIALOG's Class Diagram__\n
+
+  namespace cn.cdut.a6pan {
+    namespace Dialog {
+      class cn.cdut.a6pan.Dialog.BackUpStopDialog {
+          {static} - TAG : String
+          - activity : FragmentActivity
+          - blank : ImageView
+          - context : Context
+          - handler : Handler
+          - layoutResID : int
+          - listenedItem : int[]
+          - recyclerView : RecyclerView
+          - swipeRefreshLayout : SwipeRefreshLayout
+          + BackUpStopDialog()
+          + clearAll()
+          + delete()
+          + onClick()
+          + onRefresh()
+          + onTouchEvent()
+          + recycle()
+          + show()
+          # onCreate()
+          - loadData()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Dialog {
+      class cn.cdut.a6pan.Dialog.MyBottemChooseDialog {
+          - context : Context
+          - layoutResID : int
+          - listenedItem : int[]
+          + MyBottemChooseDialog()
+          + onClick()
+          + onTouchEvent()
+          + setOnCenterItemClickListener()
+          # onCreate()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Dialog {
+      interface cn.cdut.a6pan.Dialog.MyBottemChooseDialog.OnCenterItemClickListener {
+          {abstract} + OnCenterItemClick()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Dialog {
+      class cn.cdut.a6pan.Dialog.MyBottemDialog {
+          - context : Context
+          - layoutResID : int
+          - listenedItem : int[]
+          + MyBottemDialog()
+          + onClick()
+          + onTouchEvent()
+          + setOnCenterItemClickListener()
+          # onCreate()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Dialog {
+      interface cn.cdut.a6pan.Dialog.MyBottemDialog.OnCenterItemClickListener {
+          {abstract} + OnCenterItemClick()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Dialog {
+      class cn.cdut.a6pan.Dialog.MyBottemFileChooseDialog {
+          {static} - CHANGE_PATH : int
+          {static} - DELETE_FILE_SUCCESS : int
+          {static} - GET_FILE_FROM_CACHE_SUCCESS : int
+          {static} - GET_FILE_SUCCESS : int
+          {static} - GET_NEXT_FILE_SUCCESS : int
+          {static} - NO_MORE_DATA : int
+          {static} - TAG : String
+          - context : Context
+          - handler : Handler
+          - layoutResID : int
+          - listView : ListView
+          - listenedItem : int[]
+          - mdata : List<File>
+          - path : String
+          + MyBottemFileChooseDialog()
+          + dismiss()
+          + getPath()
+          + onClick()
+          + onTouchEvent()
+          + setOnCenterItemClickListener()
+          + show()
+          # onCreate()
+          - getFile()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Dialog {
+      interface cn.cdut.a6pan.Dialog.MyBottemFileChooseDialog.OnCenterItemClickListener {
+          {abstract} + OnCenterItemClick()
+          {abstract} + clickItem()
+      }
+    }
+  }
+  
+
+  cn.cdut.a6pan.Dialog.BackUpStopDialog .up.|> android.view.View.OnClickListener
+  cn.cdut.a6pan.Dialog.BackUpStopDialog .up.|> androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener
+  cn.cdut.a6pan.Dialog.BackUpStopDialog .up.|> cn.cdut.a6pan.Adapter.MyRecycleBinAdapter.FileChooseListener
+  cn.cdut.a6pan.Dialog.BackUpStopDialog -up-|> android.app.Dialog
+  cn.cdut.a6pan.Dialog.BackUpStopDialog o-- cn.cdut.a6pan.Adapter.MyRecycleBinAdapter : adapter
+  cn.cdut.a6pan.Dialog.BackUpStopDialog o-- cn.cdut.a6pan.ui.main.viewmodel.FileViewModel : fileViewModel
+  cn.cdut.a6pan.Dialog.MyBottemChooseDialog .up.|> android.view.View.OnClickListener
+  cn.cdut.a6pan.Dialog.MyBottemChooseDialog -up-|> android.app.Dialog
+  cn.cdut.a6pan.Dialog.MyBottemChooseDialog o-- cn.cdut.a6pan.Dialog.MyBottemChooseDialog.OnCenterItemClickListener : listener
+  cn.cdut.a6pan.Dialog.MyBottemChooseDialog +-down- cn.cdut.a6pan.Dialog.MyBottemChooseDialog.OnCenterItemClickListener
+  cn.cdut.a6pan.Dialog.MyBottemDialog .up.|> android.view.View.OnClickListener
+  cn.cdut.a6pan.Dialog.MyBottemDialog -up-|> android.app.Dialog
+  cn.cdut.a6pan.Dialog.MyBottemDialog o-- cn.cdut.a6pan.Dialog.MyBottemDialog.OnCenterItemClickListener : listener
+  cn.cdut.a6pan.Dialog.MyBottemDialog +-down- cn.cdut.a6pan.Dialog.MyBottemDialog.OnCenterItemClickListener
+  cn.cdut.a6pan.Dialog.MyBottemFileChooseDialog .up.|> android.view.View.OnClickListener
+  cn.cdut.a6pan.Dialog.MyBottemFileChooseDialog -up-|> android.app.Dialog
+  cn.cdut.a6pan.Dialog.MyBottemFileChooseDialog o-- cn.cdut.a6pan.Adapter.MyFileListDialogAdapter : adapter
+  cn.cdut.a6pan.Dialog.MyBottemFileChooseDialog o-- cn.cdut.a6pan.Dialog.MyBottemFileChooseDialog.OnCenterItemClickListener : listener
+  cn.cdut.a6pan.Dialog.MyBottemFileChooseDialog +-down- cn.cdut.a6pan.Dialog.MyBottemFileChooseDialog.OnCenterItemClickListener
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

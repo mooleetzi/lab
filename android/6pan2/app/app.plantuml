@@ -1,0 +1,966 @@
+@startuml
+
+title __APP's Class Diagram__\n
+
+  namespace androidx.databinding {
+    class androidx.databinding.DataBinderMapperImpl {
+    }
+  }
+  
+
+  namespace androidx.databinding {
+    interface androidx.databinding.DataBindingComponent {
+    }
+  }
+  
+
+  namespace androidx.databinding {
+    namespace library.baseAdapters {
+      class androidx.databinding.library.baseAdapters.BR {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Adapter {
+      class cn.cdut.a6pan.Adapter.MyDownloadAdapter {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Adapter {
+      class cn.cdut.a6pan.Adapter.MyFileListDialogAdapter {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Adapter {
+      class cn.cdut.a6pan.Adapter.MyOfflineAdapter {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Adapter {
+      class cn.cdut.a6pan.Adapter.MyPagedListAdapter {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Adapter {
+      class cn.cdut.a6pan.Adapter.MyRecycleBinAdapter {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Adapter {
+      class cn.cdut.a6pan.Adapter.MySettingListAdapter {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    class cn.cdut.a6pan.BR {
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.File {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.FileList {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.FileListPage {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.Offline {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.OfflinePre {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.OfflineTask {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.OfflineTaskPage {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.Person {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.Result {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.ResultChangeName {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.ResultDelOffline {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.ResultFile {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.ResultFilePage {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.ResultFileSingle {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.ResultOffline {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.ResultOfflinePre {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.ResultOfflineTaskPage {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.ResultPerson {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.ResultSendMessage {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Bean {
+      class cn.cdut.a6pan.Bean.User {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    class cn.cdut.a6pan.BuildConfig {
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace DAO {
+      interface cn.cdut.a6pan.DAO.FileDao {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace DAO {
+      class cn.cdut.a6pan.DAO.FileDao_Impl {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace DataBase {
+      abstract class cn.cdut.a6pan.DataBase.FileDataBase {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace DataBase {
+      class cn.cdut.a6pan.DataBase.FileDataBase_Impl {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    class cn.cdut.a6pan.DataBinderMapperImpl {
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    class cn.cdut.a6pan.DataBindingInfo {
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Dialog {
+      class cn.cdut.a6pan.Dialog.BackUpStopDialog {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Dialog {
+      class cn.cdut.a6pan.Dialog.MyBottemChooseDialog {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Dialog {
+      class cn.cdut.a6pan.Dialog.MyBottemDialog {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Dialog {
+      class cn.cdut.a6pan.Dialog.MyBottemFileChooseDialog {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    class cn.cdut.a6pan.LoginActivity {
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    class cn.cdut.a6pan.MainActivity {
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Utils {
+      class cn.cdut.a6pan.Utils.Code {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Utils {
+      class cn.cdut.a6pan.Utils.DataBaseHelper {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Utils {
+      class cn.cdut.a6pan.Utils.DownloadUtils {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Utils {
+      abstract class cn.cdut.a6pan.Utils.HttpCallbackListener {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Utils {
+      class cn.cdut.a6pan.Utils.HttpHelper {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Utils {
+      class cn.cdut.a6pan.Utils.HttpUtils {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Utils {
+      class cn.cdut.a6pan.Utils.JellyInterpolator {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Utils {
+      enum RequestType {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Utils {
+      class cn.cdut.a6pan.Utils.Security {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Utils {
+      class cn.cdut.a6pan.Utils.ServerException {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Utils {
+      class cn.cdut.a6pan.Utils.StatusBarUtils {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace databinding {
+      abstract class cn.cdut.a6pan.databinding.FileFragmentBinding {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace databinding {
+      class cn.cdut.a6pan.databinding.FileFragmentBindingImpl {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace databinding {
+      abstract class cn.cdut.a6pan.databinding.FragmentDownloadBinding {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace databinding {
+      class cn.cdut.a6pan.databinding.FragmentDownloadBindingImpl {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace databinding {
+      abstract class cn.cdut.a6pan.databinding.FragmentOfflineBinding {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace databinding {
+      class cn.cdut.a6pan.databinding.FragmentOfflineBindingImpl {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace databinding {
+      abstract class cn.cdut.a6pan.databinding.FragmentUploadBinding {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace databinding {
+      class cn.cdut.a6pan.databinding.FragmentUploadBindingImpl {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace databinding {
+      abstract class cn.cdut.a6pan.databinding.LoginActivityBinding {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace databinding {
+      class cn.cdut.a6pan.databinding.LoginActivityBindingImpl {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace databinding {
+      abstract class cn.cdut.a6pan.databinding.LoginByCodeFragmentBinding {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace databinding {
+      class cn.cdut.a6pan.databinding.LoginByCodeFragmentBindingImpl {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace databinding {
+      abstract class cn.cdut.a6pan.databinding.LoginFragmentBinding {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace databinding {
+      class cn.cdut.a6pan.databinding.LoginFragmentBindingImpl {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace databinding {
+      abstract class cn.cdut.a6pan.databinding.LoginIndexFragmentBinding {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace databinding {
+      class cn.cdut.a6pan.databinding.LoginIndexFragmentBindingImpl {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace databinding {
+      abstract class cn.cdut.a6pan.databinding.MainActivityBinding {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace databinding {
+      class cn.cdut.a6pan.databinding.MainActivityBindingImpl {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace databinding {
+      abstract class cn.cdut.a6pan.databinding.ModifyPwdByCodeFragmentBinding {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace databinding {
+      class cn.cdut.a6pan.databinding.ModifyPwdByCodeFragmentBindingImpl {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace databinding {
+      abstract class cn.cdut.a6pan.databinding.MyTopBarBinding {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace databinding {
+      class cn.cdut.a6pan.databinding.MyTopBarBindingImpl {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace databinding {
+      abstract class cn.cdut.a6pan.databinding.SettingFragmentBinding {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace databinding {
+      class cn.cdut.a6pan.databinding.SettingFragmentBindingImpl {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace databinding {
+      abstract class cn.cdut.a6pan.databinding.TransmissionFragmentBinding {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace databinding {
+      class cn.cdut.a6pan.databinding.TransmissionFragmentBindingImpl {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace ui.login {
+      class cn.cdut.a6pan.ui.login.LoginByCodeFragment {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace ui.login {
+      class cn.cdut.a6pan.ui.login.LoginFragment {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace ui.login {
+      class cn.cdut.a6pan.ui.login.LoginIndexFragment {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace ui.login {
+      class cn.cdut.a6pan.ui.login.LoginViewModel {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace ui.login {
+      class cn.cdut.a6pan.ui.login.ModifyPwdByCode {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace ui.login {
+      class cn.cdut.a6pan.ui.login.RegisterFragment {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace ui.login {
+      class cn.cdut.a6pan.ui.login.RegisterViewModel {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace ui.main {
+      class cn.cdut.a6pan.ui.main.DownloadContentObserver {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace ui.main {
+      class cn.cdut.a6pan.ui.main.FilePageDataSourceFactory {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace ui.main {
+      class cn.cdut.a6pan.ui.main.OfflinePageDataSourceFactory {
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace ui.main {
+      namespace fragment {
+        class cn.cdut.a6pan.ui.main.fragment.DownloadFragment {
+        }
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace ui.main {
+      namespace fragment {
+        class cn.cdut.a6pan.ui.main.fragment.FileFragment {
+        }
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace ui.main {
+      namespace fragment {
+        class cn.cdut.a6pan.ui.main.fragment.OfflineFragment {
+        }
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace ui.main {
+      namespace fragment {
+        class cn.cdut.a6pan.ui.main.fragment.SettingFragment {
+        }
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace ui.main {
+      namespace fragment {
+        class cn.cdut.a6pan.ui.main.fragment.TransmissionFragment {
+        }
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace ui.main {
+      namespace fragment {
+        class cn.cdut.a6pan.ui.main.fragment.UploadFragment {
+        }
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace ui.main {
+      namespace viewmodel {
+        class cn.cdut.a6pan.ui.main.viewmodel.FileViewModel {
+        }
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace ui.main {
+      namespace viewmodel {
+        class cn.cdut.a6pan.ui.main.viewmodel.SettingViewModel {
+        }
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace ui.main {
+      namespace viewmodel {
+        class cn.cdut.a6pan.ui.main.viewmodel.TransmissionViewModel {
+        }
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace ui.main {
+      namespace viewmodel {
+        class cn.cdut.a6pan.ui.main.viewmodel.UserViewModel {
+        }
+      }
+    }
+  }
+  
+
+  androidx.databinding.DataBinderMapperImpl -up-|> androidx.databinding.MergedDataBinderMapper
+  cn.cdut.a6pan.Adapter.MyDownloadAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  cn.cdut.a6pan.Adapter.MyDownloadAdapter o-- cn.cdut.a6pan.ui.main.viewmodel.TransmissionViewModel : viewModel
+  cn.cdut.a6pan.Adapter.MyFileListDialogAdapter -up-|> android.widget.BaseAdapter
+  cn.cdut.a6pan.Adapter.MyOfflineAdapter -up-|> androidx.paging.PagedListAdapter
+  cn.cdut.a6pan.Adapter.MyOfflineAdapter o-- cn.cdut.a6pan.ui.main.viewmodel.TransmissionViewModel : viewModel
+  cn.cdut.a6pan.Adapter.MyPagedListAdapter -up-|> androidx.paging.PagedListAdapter
+  cn.cdut.a6pan.Adapter.MyPagedListAdapter o-- cn.cdut.a6pan.ui.main.viewmodel.FileViewModel : fileViewModel
+  cn.cdut.a6pan.Adapter.MyPagedListAdapter o-- cn.cdut.a6pan.Adapter.MyPagedListAdapter.FileChooseListener : listener
+  cn.cdut.a6pan.Adapter.MyRecycleBinAdapter -up-|> androidx.paging.PagedListAdapter
+  cn.cdut.a6pan.Adapter.MyRecycleBinAdapter o-- cn.cdut.a6pan.ui.main.viewmodel.FileViewModel : fileViewModel
+  cn.cdut.a6pan.Adapter.MyRecycleBinAdapter o-- cn.cdut.a6pan.Adapter.MyRecycleBinAdapter.FileChooseListener : listener
+  cn.cdut.a6pan.Adapter.MySettingListAdapter -up-|> android.widget.BaseAdapter
+  cn.cdut.a6pan.Adapter.MySettingListAdapter o-- cn.cdut.a6pan.Adapter.MySettingListAdapter.InnerClickListener : listener
+  cn.cdut.a6pan.Bean.FileList o-- cn.cdut.a6pan.Bean.File : parent
+  cn.cdut.a6pan.Bean.FileListPage -up-|> cn.cdut.a6pan.Bean.FileList
+  cn.cdut.a6pan.Bean.ResultChangeName -up-|> cn.cdut.a6pan.Bean.Result
+  cn.cdut.a6pan.Bean.ResultDelOffline -up-|> cn.cdut.a6pan.Bean.Result
+  cn.cdut.a6pan.Bean.ResultFile -up-|> cn.cdut.a6pan.Bean.Result
+  cn.cdut.a6pan.Bean.ResultFile o-- cn.cdut.a6pan.Bean.FileList : result
+  cn.cdut.a6pan.Bean.ResultFilePage -up-|> cn.cdut.a6pan.Bean.Result
+  cn.cdut.a6pan.Bean.ResultFilePage o-- cn.cdut.a6pan.Bean.FileListPage : result
+  cn.cdut.a6pan.Bean.ResultFileSingle -up-|> cn.cdut.a6pan.Bean.Result
+  cn.cdut.a6pan.Bean.ResultFileSingle o-- cn.cdut.a6pan.Bean.File : result
+  cn.cdut.a6pan.Bean.ResultOffline -up-|> cn.cdut.a6pan.Bean.Result
+  cn.cdut.a6pan.Bean.ResultOffline o-- cn.cdut.a6pan.Bean.Offline : result
+  cn.cdut.a6pan.Bean.ResultOfflinePre -up-|> cn.cdut.a6pan.Bean.Result
+  cn.cdut.a6pan.Bean.ResultOfflineTaskPage -up-|> cn.cdut.a6pan.Bean.Result
+  cn.cdut.a6pan.Bean.ResultOfflineTaskPage o-- cn.cdut.a6pan.Bean.OfflineTaskPage : result
+  cn.cdut.a6pan.Bean.ResultPerson -up-|> cn.cdut.a6pan.Bean.Result
+  cn.cdut.a6pan.Bean.ResultPerson o-- cn.cdut.a6pan.Bean.Person : result
+  cn.cdut.a6pan.Bean.ResultSendMessage -up-|> cn.cdut.a6pan.Bean.Result
+  cn.cdut.a6pan.DAO.FileDao_Impl .up.|> cn.cdut.a6pan.DAO.FileDao
+  cn.cdut.a6pan.DataBase.FileDataBase -up-|> androidx.room.RoomDatabase
+  cn.cdut.a6pan.DataBase.FileDataBase_Impl -up-|> cn.cdut.a6pan.DataBase.FileDataBase
+  cn.cdut.a6pan.DataBase.FileDataBase_Impl o-- cn.cdut.a6pan.DAO.FileDao : _fileDao
+  cn.cdut.a6pan.DataBinderMapperImpl -up-|> androidx.databinding.DataBinderMapper
+  cn.cdut.a6pan.Dialog.BackUpStopDialog .up.|> android.view.View.OnClickListener
+  cn.cdut.a6pan.Dialog.BackUpStopDialog .up.|> androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener
+  cn.cdut.a6pan.Dialog.BackUpStopDialog .up.|> cn.cdut.a6pan.Adapter.MyRecycleBinAdapter.FileChooseListener
+  cn.cdut.a6pan.Dialog.BackUpStopDialog -up-|> android.app.Dialog
+  cn.cdut.a6pan.Dialog.BackUpStopDialog o-- cn.cdut.a6pan.Adapter.MyRecycleBinAdapter : adapter
+  cn.cdut.a6pan.Dialog.BackUpStopDialog o-- cn.cdut.a6pan.ui.main.viewmodel.FileViewModel : fileViewModel
+  cn.cdut.a6pan.Dialog.MyBottemChooseDialog .up.|> android.view.View.OnClickListener
+  cn.cdut.a6pan.Dialog.MyBottemChooseDialog -up-|> android.app.Dialog
+  cn.cdut.a6pan.Dialog.MyBottemChooseDialog o-- cn.cdut.a6pan.Dialog.MyBottemChooseDialog.OnCenterItemClickListener : listener
+  cn.cdut.a6pan.Dialog.MyBottemDialog .up.|> android.view.View.OnClickListener
+  cn.cdut.a6pan.Dialog.MyBottemDialog -up-|> android.app.Dialog
+  cn.cdut.a6pan.Dialog.MyBottemDialog o-- cn.cdut.a6pan.Dialog.MyBottemDialog.OnCenterItemClickListener : listener
+  cn.cdut.a6pan.Dialog.MyBottemFileChooseDialog .up.|> android.view.View.OnClickListener
+  cn.cdut.a6pan.Dialog.MyBottemFileChooseDialog -up-|> android.app.Dialog
+  cn.cdut.a6pan.Dialog.MyBottemFileChooseDialog o-- cn.cdut.a6pan.Adapter.MyFileListDialogAdapter : adapter
+  cn.cdut.a6pan.Dialog.MyBottemFileChooseDialog o-- cn.cdut.a6pan.Dialog.MyBottemFileChooseDialog.OnCenterItemClickListener : listener
+  cn.cdut.a6pan.LoginActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  cn.cdut.a6pan.LoginActivity o-- cn.cdut.a6pan.databinding.LoginActivityBinding : binding
+  cn.cdut.a6pan.LoginActivity o-- cn.cdut.a6pan.ui.login.LoginViewModel : mViewModel
+  cn.cdut.a6pan.MainActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  cn.cdut.a6pan.MainActivity o-- cn.cdut.a6pan.databinding.MainActivityBinding : binding
+  cn.cdut.a6pan.MainActivity o-- cn.cdut.a6pan.ui.main.viewmodel.FileViewModel : fileViewModel
+  cn.cdut.a6pan.Utils.DataBaseHelper -up-|> android.database.sqlite.SQLiteOpenHelper
+  cn.cdut.a6pan.Utils.JellyInterpolator -up-|> android.view.animation.LinearInterpolator
+  cn.cdut.a6pan.Utils.ServerException -up-|> java.io.IOException
+  cn.cdut.a6pan.databinding.FileFragmentBinding -up-|> androidx.databinding.ViewDataBinding
+  cn.cdut.a6pan.databinding.FileFragmentBindingImpl -up-|> cn.cdut.a6pan.databinding.FileFragmentBinding
+  cn.cdut.a6pan.databinding.FragmentDownloadBinding -up-|> androidx.databinding.ViewDataBinding
+  cn.cdut.a6pan.databinding.FragmentDownloadBindingImpl -up-|> cn.cdut.a6pan.databinding.FragmentDownloadBinding
+  cn.cdut.a6pan.databinding.FragmentOfflineBinding -up-|> androidx.databinding.ViewDataBinding
+  cn.cdut.a6pan.databinding.FragmentOfflineBindingImpl -up-|> cn.cdut.a6pan.databinding.FragmentOfflineBinding
+  cn.cdut.a6pan.databinding.FragmentUploadBinding -up-|> androidx.databinding.ViewDataBinding
+  cn.cdut.a6pan.databinding.FragmentUploadBindingImpl -up-|> cn.cdut.a6pan.databinding.FragmentUploadBinding
+  cn.cdut.a6pan.databinding.LoginActivityBinding -up-|> androidx.databinding.ViewDataBinding
+  cn.cdut.a6pan.databinding.LoginActivityBindingImpl -up-|> cn.cdut.a6pan.databinding.LoginActivityBinding
+  cn.cdut.a6pan.databinding.LoginByCodeFragmentBinding -up-|> androidx.databinding.ViewDataBinding
+  cn.cdut.a6pan.databinding.LoginByCodeFragmentBindingImpl -up-|> cn.cdut.a6pan.databinding.LoginByCodeFragmentBinding
+  cn.cdut.a6pan.databinding.LoginFragmentBinding -up-|> androidx.databinding.ViewDataBinding
+  cn.cdut.a6pan.databinding.LoginFragmentBinding o-- cn.cdut.a6pan.ui.login.LoginViewModel : mData
+  cn.cdut.a6pan.databinding.LoginFragmentBindingImpl -up-|> cn.cdut.a6pan.databinding.LoginFragmentBinding
+  cn.cdut.a6pan.databinding.LoginIndexFragmentBinding -up-|> androidx.databinding.ViewDataBinding
+  cn.cdut.a6pan.databinding.LoginIndexFragmentBindingImpl -up-|> cn.cdut.a6pan.databinding.LoginIndexFragmentBinding
+  cn.cdut.a6pan.databinding.MainActivityBinding -up-|> androidx.databinding.ViewDataBinding
+  cn.cdut.a6pan.databinding.MainActivityBindingImpl -up-|> cn.cdut.a6pan.databinding.MainActivityBinding
+  cn.cdut.a6pan.databinding.ModifyPwdByCodeFragmentBinding -up-|> androidx.databinding.ViewDataBinding
+  cn.cdut.a6pan.databinding.ModifyPwdByCodeFragmentBindingImpl -up-|> cn.cdut.a6pan.databinding.ModifyPwdByCodeFragmentBinding
+  cn.cdut.a6pan.databinding.MyTopBarBinding -up-|> androidx.databinding.ViewDataBinding
+  cn.cdut.a6pan.databinding.MyTopBarBindingImpl -up-|> cn.cdut.a6pan.databinding.MyTopBarBinding
+  cn.cdut.a6pan.databinding.SettingFragmentBinding -up-|> androidx.databinding.ViewDataBinding
+  cn.cdut.a6pan.databinding.SettingFragmentBindingImpl -up-|> cn.cdut.a6pan.databinding.SettingFragmentBinding
+  cn.cdut.a6pan.databinding.TransmissionFragmentBinding -up-|> androidx.databinding.ViewDataBinding
+  cn.cdut.a6pan.databinding.TransmissionFragmentBindingImpl -up-|> cn.cdut.a6pan.databinding.TransmissionFragmentBinding
+  cn.cdut.a6pan.ui.login.LoginByCodeFragment -up-|> androidx.fragment.app.Fragment
+  cn.cdut.a6pan.ui.login.LoginByCodeFragment o-- cn.cdut.a6pan.databinding.LoginByCodeFragmentBinding : binding
+  cn.cdut.a6pan.ui.login.LoginFragment -up-|> androidx.fragment.app.Fragment
+  cn.cdut.a6pan.ui.login.LoginFragment o-- cn.cdut.a6pan.databinding.LoginFragmentBinding : binding
+  cn.cdut.a6pan.ui.login.LoginFragment o-- cn.cdut.a6pan.ui.login.LoginViewModel : mViewModel
+  cn.cdut.a6pan.ui.login.LoginIndexFragment -up-|> androidx.fragment.app.Fragment
+  cn.cdut.a6pan.ui.login.LoginIndexFragment o-- cn.cdut.a6pan.ui.login.LoginViewModel : mViewModel
+  cn.cdut.a6pan.ui.login.LoginViewModel -up-|> androidx.lifecycle.ViewModel
+  cn.cdut.a6pan.ui.login.ModifyPwdByCode -up-|> androidx.fragment.app.Fragment
+  cn.cdut.a6pan.ui.login.ModifyPwdByCode o-- cn.cdut.a6pan.databinding.ModifyPwdByCodeFragmentBinding : binding
+  cn.cdut.a6pan.ui.login.RegisterFragment -up-|> androidx.fragment.app.Fragment
+  cn.cdut.a6pan.ui.login.RegisterFragment o-- cn.cdut.a6pan.ui.login.RegisterViewModel : mViewModel
+  cn.cdut.a6pan.ui.login.RegisterViewModel -up-|> androidx.lifecycle.ViewModel
+  cn.cdut.a6pan.ui.main.DownloadContentObserver -up-|> android.database.ContentObserver
+  cn.cdut.a6pan.ui.main.FilePageDataSourceFactory -up-|> androidx.paging.DataSource.Factory
+  cn.cdut.a6pan.ui.main.OfflinePageDataSourceFactory -up-|> androidx.paging.DataSource.Factory
+  cn.cdut.a6pan.ui.main.fragment.DownloadFragment .up.|> androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener
+  cn.cdut.a6pan.ui.main.fragment.DownloadFragment -up-|> androidx.fragment.app.Fragment
+  cn.cdut.a6pan.ui.main.fragment.DownloadFragment o-- cn.cdut.a6pan.Adapter.MyDownloadAdapter : adapter
+  cn.cdut.a6pan.ui.main.fragment.DownloadFragment o-- cn.cdut.a6pan.databinding.FragmentDownloadBinding : binding
+  cn.cdut.a6pan.ui.main.fragment.DownloadFragment o-- cn.cdut.a6pan.ui.main.DownloadContentObserver : downloadContentObserver
+  cn.cdut.a6pan.ui.main.fragment.DownloadFragment o-- cn.cdut.a6pan.DAO.FileDao : fileDao
+  cn.cdut.a6pan.ui.main.fragment.DownloadFragment o-- cn.cdut.a6pan.DataBase.FileDataBase : fileDataBase
+  cn.cdut.a6pan.ui.main.fragment.DownloadFragment o-- cn.cdut.a6pan.ui.main.viewmodel.TransmissionViewModel : viewModel
+  cn.cdut.a6pan.ui.main.fragment.FileFragment .up.|> androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener
+  cn.cdut.a6pan.ui.main.fragment.FileFragment .up.|> cn.cdut.a6pan.Adapter.MyPagedListAdapter.FileChooseListener
+  cn.cdut.a6pan.ui.main.fragment.FileFragment .up.|> cn.cdut.a6pan.Dialog.MyBottemChooseDialog.OnCenterItemClickListener
+  cn.cdut.a6pan.ui.main.fragment.FileFragment .up.|> cn.cdut.a6pan.Dialog.MyBottemDialog.OnCenterItemClickListener
+  cn.cdut.a6pan.ui.main.fragment.FileFragment .up.|> cn.cdut.a6pan.Dialog.MyBottemFileChooseDialog.OnCenterItemClickListener
+  cn.cdut.a6pan.ui.main.fragment.FileFragment -up-|> androidx.fragment.app.Fragment
+  cn.cdut.a6pan.ui.main.fragment.FileFragment o-- cn.cdut.a6pan.Adapter.MyPagedListAdapter : adapter
+  cn.cdut.a6pan.ui.main.fragment.FileFragment o-- cn.cdut.a6pan.Dialog.BackUpStopDialog : backUpStopDialog
+  cn.cdut.a6pan.ui.main.fragment.FileFragment o-- cn.cdut.a6pan.databinding.FileFragmentBinding : binding
+  cn.cdut.a6pan.ui.main.fragment.FileFragment o-- cn.cdut.a6pan.DAO.FileDao : fileDao
+  cn.cdut.a6pan.ui.main.fragment.FileFragment o-- cn.cdut.a6pan.DataBase.FileDataBase : fileDataBase
+  cn.cdut.a6pan.ui.main.fragment.FileFragment o-- cn.cdut.a6pan.ui.main.viewmodel.FileViewModel : mViewModel
+  cn.cdut.a6pan.ui.main.fragment.FileFragment o-- cn.cdut.a6pan.Dialog.MyBottemChooseDialog : myBottemChooseDialog
+  cn.cdut.a6pan.ui.main.fragment.FileFragment o-- cn.cdut.a6pan.Dialog.MyBottemDialog : myBottemDialog
+  cn.cdut.a6pan.ui.main.fragment.FileFragment o-- cn.cdut.a6pan.Dialog.MyBottemFileChooseDialog : myBottemFileChooseDialog
+  cn.cdut.a6pan.ui.main.fragment.OfflineFragment .up.|> androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener
+  cn.cdut.a6pan.ui.main.fragment.OfflineFragment -up-|> androidx.fragment.app.Fragment
+  cn.cdut.a6pan.ui.main.fragment.OfflineFragment o-- cn.cdut.a6pan.Adapter.MyOfflineAdapter : adapter
+  cn.cdut.a6pan.ui.main.fragment.OfflineFragment o-- cn.cdut.a6pan.databinding.FragmentOfflineBinding : binding
+  cn.cdut.a6pan.ui.main.fragment.OfflineFragment o-- cn.cdut.a6pan.ui.main.viewmodel.TransmissionViewModel : viewModel
+  cn.cdut.a6pan.ui.main.fragment.SettingFragment .up.|> android.view.View.OnClickListener
+  cn.cdut.a6pan.ui.main.fragment.SettingFragment -up-|> androidx.fragment.app.Fragment
+  cn.cdut.a6pan.ui.main.fragment.SettingFragment o-- cn.cdut.a6pan.Adapter.MySettingListAdapter : adapter
+  cn.cdut.a6pan.ui.main.fragment.SettingFragment o-- cn.cdut.a6pan.databinding.SettingFragmentBinding : binding
+  cn.cdut.a6pan.ui.main.fragment.SettingFragment o-- cn.cdut.a6pan.ui.main.fragment.SettingFragment.MyHandler : handler
+  cn.cdut.a6pan.ui.main.fragment.TransmissionFragment -up-|> androidx.fragment.app.Fragment
+  cn.cdut.a6pan.ui.main.fragment.TransmissionFragment o-- cn.cdut.a6pan.databinding.TransmissionFragmentBinding : binding
+  cn.cdut.a6pan.ui.main.fragment.TransmissionFragment o-- cn.cdut.a6pan.ui.main.viewmodel.TransmissionViewModel : mViewModel
+  cn.cdut.a6pan.ui.main.fragment.UploadFragment -up-|> androidx.fragment.app.Fragment
+  cn.cdut.a6pan.ui.main.viewmodel.FileViewModel -up-|> androidx.lifecycle.ViewModel
+  cn.cdut.a6pan.ui.main.viewmodel.FileViewModel o-- cn.cdut.a6pan.Bean.ResultFilePage : resultBean
+  cn.cdut.a6pan.ui.main.viewmodel.SettingViewModel -up-|> androidx.lifecycle.ViewModel
+  cn.cdut.a6pan.ui.main.viewmodel.TransmissionViewModel -up-|> androidx.lifecycle.ViewModel
+  cn.cdut.a6pan.ui.main.viewmodel.TransmissionViewModel o-- cn.cdut.a6pan.Bean.ResultOfflineTaskPage : resultBean
+  cn.cdut.a6pan.ui.main.viewmodel.UserViewModel -up-|> androidx.lifecycle.AndroidViewModel
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

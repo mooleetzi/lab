@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coffees>
+	<!--咖啡豆类型列表-->
+    <beans package="com.xzit.beans">
+        <bean>
+            <name>苏门答腊瓦哈纳庄园咖啡豆</name>
+            <image>images/bean1.png</image>
+            <price>40</price>
+            <classname>Bean1</classname>
+        </bean>
+
+        <bean>
+            <name>埃塞俄比亚比塔庄园咖啡豆</name>
+            <image>images/bean2.png</image>
+            <price>30</price>
+            <classname>Bean2</classname>
+        </bean>
+
+        <bean>
+            <name>中国云南普洱保山综合咖啡豆</name>
+            <image>images/bean3.png</image>
+            <price>24</price>
+            <classname>Bean3</classname>
+        </bean>
+
+        <bean>
+            <name>中国云南晴开农场咖啡豆</name>
+            <image>images/bean4.png</image>
+            <price>26</price>
+            <classname>Bean4</classname>
+        </bean>
+
+        <bean>
+            <name>哥伦比亚圣洛克蒙克斯咖啡豆</name>
+            <image>images/bean5.png</image>
+            <price>42</price>
+            <classname>Bean5</classname>
+        </bean>
+
+        <bean>
+            <name>凤舞祥云综合咖啡豆</name>
+            <image>images/bean6.png</image>
+            <price>20</price>
+            <classname>Bean6</classname>
+        </bean>
+
+        <bean>
+            <name>肯亚咖啡豆</name>
+            <image>images/bean7.png</image>
+            <price>32</price>
+            <classname>Bean7</classname>
+        </bean>
+
+    </beans>
+
+    <!--咖啡口味类型-->
+    <flavours>
+        <flavour>
+            <name>牛奶</name>
+            <price>8</price>
+            <classname>Flavour1</classname>
+        </flavour>
+        <flavour>
+            <name>摩卡</name>
+            <price>10</price>
+            <classname>Flavour2</classname>
+        </flavour>
+        <flavour>
+            <name>康宝蓝</name>
+            <price>15</price>
+            <classname>Flavour3</classname>
+        </flavour>
+        <flavour>
+            <name>卡布奇诺</name>
+            <price>20</price>
+            <classname>Flavour4</classname>
+        </flavour>
+    </flavours>
+
+
+</coffees>

@@ -1,0 +1,257 @@
+@startuml
+
+title __ADAPTER's Class Diagram__\n
+
+  namespace cn.cdut.a6pan {
+    namespace Adapter {
+      class cn.cdut.a6pan.Adapter.MyDownloadAdapter {
+          {static} - TAG : String
+          - context : Context
+          - downloadManager : DownloadManager
+          - list : List<File>
+          + MyDownloadAdapter()
+          + getItemCount()
+          + onBindViewHolder()
+          + onBindViewHolder()
+          + onCreateViewHolder()
+          - getSize()
+          - getTime()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Adapter {
+      class cn.cdut.a6pan.Adapter.MyDownloadAdapter.MyViewHolder {
+          + fileIcon : ImageView
+          + fileName : TextView
+          + fileSize : TextView
+          + fileTime : TextView
+          + itemView : View
+          + progressBar : ProgressBar
+          + MyViewHolder()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Adapter {
+      class cn.cdut.a6pan.Adapter.MyFileListDialogAdapter {
+          {static} - TAG : String
+          - list : List<File>
+          - mInflater : LayoutInflater
+          - temp : View
+          + MyFileListDialogAdapter()
+          + MyFileListDialogAdapter()
+          + getCount()
+          + getItem()
+          + getItemId()
+          + getView()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Adapter {
+      class cn.cdut.a6pan.Adapter.MyFileListDialogAdapter.ViewHolder {
+          + fileIcon : ImageView
+          + fileName : TextView
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Adapter {
+      class cn.cdut.a6pan.Adapter.MyOfflineAdapter {
+          {static} - TAG : String
+          - context : Context
+          - handler : Handler
+          + MyOfflineAdapter()
+          + getItemCount()
+          + onBindViewHolder()
+          + onCreateViewHolder()
+          + setContext()
+          + setHandler()
+          + setViewModel()
+          {static} - getSize()
+          {static} - getTime()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Adapter {
+      class cn.cdut.a6pan.Adapter.MyOfflineAdapter.MyViewHolder {
+          - delete : ImageView
+          - itemView : View
+          - name : TextView
+          - path : TextView
+          - progressBar : ProgressBar
+          - size : TextView
+          - time : TextView
+          + MyViewHolder()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Adapter {
+      class cn.cdut.a6pan.Adapter.MyPagedListAdapter {
+          {static} - TAG : String
+          + MyPagedListAdapter()
+          + onBindViewHolder()
+          + onCreateViewHolder()
+          + openPreview()
+          + setFileViewModel()
+          + setListener()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Adapter {
+      interface cn.cdut.a6pan.Adapter.MyPagedListAdapter.FileChooseListener {
+          {abstract} + onCheckChanged()
+          {abstract} + onLongClick()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Adapter {
+      class cn.cdut.a6pan.Adapter.MyPagedListAdapter.MyViewHolder {
+          + checkBox : CheckBox
+          + fileIcon : ImageView
+          + fileName : TextView
+          + fileSize : TextView
+          + fileTime : TextView
+          + itemView : View
+          + MyViewHolder()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Adapter {
+      class cn.cdut.a6pan.Adapter.MyRecycleBinAdapter {
+          {static} - TAG : String
+          + MyRecycleBinAdapter()
+          + onBindViewHolder()
+          + onCreateViewHolder()
+          + setFileViewModel()
+          + setListener()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Adapter {
+      interface cn.cdut.a6pan.Adapter.MyRecycleBinAdapter.FileChooseListener {
+          {abstract} + delete()
+          {abstract} + recycle()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Adapter {
+      class cn.cdut.a6pan.Adapter.MyRecycleBinAdapter.MyViewHolder {
+          + fileDelete : ImageView
+          + fileIcon : ImageView
+          + fileName : TextView
+          + fileRecycle : ImageView
+          + fileSize : TextView
+          + fileTime : TextView
+          + itemView : View
+          + MyViewHolder()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Adapter {
+      class cn.cdut.a6pan.Adapter.MySettingListAdapter {
+          {static} - TAG : String
+          - list : List<HashMap>
+          - mInflater : LayoutInflater
+          + MySettingListAdapter()
+          + MySettingListAdapter()
+          + getCount()
+          + getItem()
+          + getItemId()
+          + getView()
+          + setListener()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Adapter {
+      class cn.cdut.a6pan.Adapter.MySettingListAdapter.Holder {
+          + other : TextView
+          + rightIcon : ImageView
+          + setting : TextView
+          - letfIcon : ImageView
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Adapter {
+      interface cn.cdut.a6pan.Adapter.MySettingListAdapter.InnerClickListener {
+          {abstract} + doit()
+      }
+    }
+  }
+  
+
+  cn.cdut.a6pan.Adapter.MyDownloadAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  cn.cdut.a6pan.Adapter.MyDownloadAdapter o-- cn.cdut.a6pan.ui.main.viewmodel.TransmissionViewModel : viewModel
+  cn.cdut.a6pan.Adapter.MyDownloadAdapter +-down- cn.cdut.a6pan.Adapter.MyDownloadAdapter.MyViewHolder
+  cn.cdut.a6pan.Adapter.MyDownloadAdapter.MyViewHolder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+  cn.cdut.a6pan.Adapter.MyFileListDialogAdapter -up-|> android.widget.BaseAdapter
+  cn.cdut.a6pan.Adapter.MyFileListDialogAdapter +-down- cn.cdut.a6pan.Adapter.MyFileListDialogAdapter.ViewHolder
+  cn.cdut.a6pan.Adapter.MyOfflineAdapter -up-|> androidx.paging.PagedListAdapter
+  cn.cdut.a6pan.Adapter.MyOfflineAdapter o-- cn.cdut.a6pan.ui.main.viewmodel.TransmissionViewModel : viewModel
+  cn.cdut.a6pan.Adapter.MyOfflineAdapter +-down- cn.cdut.a6pan.Adapter.MyOfflineAdapter.MyViewHolder
+  cn.cdut.a6pan.Adapter.MyOfflineAdapter.MyViewHolder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+  cn.cdut.a6pan.Adapter.MyPagedListAdapter -up-|> androidx.paging.PagedListAdapter
+  cn.cdut.a6pan.Adapter.MyPagedListAdapter o-- cn.cdut.a6pan.ui.main.viewmodel.FileViewModel : fileViewModel
+  cn.cdut.a6pan.Adapter.MyPagedListAdapter o-- cn.cdut.a6pan.Adapter.MyPagedListAdapter.FileChooseListener : listener
+  cn.cdut.a6pan.Adapter.MyPagedListAdapter +-down- cn.cdut.a6pan.Adapter.MyPagedListAdapter.FileChooseListener
+  cn.cdut.a6pan.Adapter.MyPagedListAdapter +-down- cn.cdut.a6pan.Adapter.MyPagedListAdapter.MyViewHolder
+  cn.cdut.a6pan.Adapter.MyPagedListAdapter.MyViewHolder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+  cn.cdut.a6pan.Adapter.MyRecycleBinAdapter -up-|> androidx.paging.PagedListAdapter
+  cn.cdut.a6pan.Adapter.MyRecycleBinAdapter o-- cn.cdut.a6pan.ui.main.viewmodel.FileViewModel : fileViewModel
+  cn.cdut.a6pan.Adapter.MyRecycleBinAdapter o-- cn.cdut.a6pan.Adapter.MyRecycleBinAdapter.FileChooseListener : listener
+  cn.cdut.a6pan.Adapter.MyRecycleBinAdapter +-down- cn.cdut.a6pan.Adapter.MyRecycleBinAdapter.FileChooseListener
+  cn.cdut.a6pan.Adapter.MyRecycleBinAdapter +-down- cn.cdut.a6pan.Adapter.MyRecycleBinAdapter.MyViewHolder
+  cn.cdut.a6pan.Adapter.MyRecycleBinAdapter.MyViewHolder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+  cn.cdut.a6pan.Adapter.MySettingListAdapter -up-|> android.widget.BaseAdapter
+  cn.cdut.a6pan.Adapter.MySettingListAdapter o-- cn.cdut.a6pan.Adapter.MySettingListAdapter.InnerClickListener : listener
+  cn.cdut.a6pan.Adapter.MySettingListAdapter +-down- cn.cdut.a6pan.Adapter.MySettingListAdapter.Holder
+  cn.cdut.a6pan.Adapter.MySettingListAdapter +-down- cn.cdut.a6pan.Adapter.MySettingListAdapter.InnerClickListener
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

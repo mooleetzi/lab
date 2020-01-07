@@ -1,0 +1,215 @@
+@startuml
+
+title __UTILS's Class Diagram__\n
+
+  namespace cn.cdut.a6pan {
+    namespace Utils {
+      class cn.cdut.a6pan.Utils.Code {
+          {static} + DOWNLOAD_FAILED : int
+          {static} + DOWNLOAD_SUCCESS : int
+          {static} + FAILED : int
+          {static} + FILE_ALL_DELETE_FAILED : int
+          {static} + FILE_ALL_DELETE_SUCCESS : int
+          {static} + FILE_BACK_FAILED : int
+          {static} + FILE_BACK_SUCCESS : int
+          {static} + FILE_COPY_FAILED : int
+          {static} + FILE_COPY_SUCCESS : int
+          {static} + FILE_DELETE_FAILED : int
+          {static} + FILE_DELETE_SUCCESS : int
+          {static} + FILE_DOWNLOAD_ADDR_FAILED : int
+          {static} + FILE_DOWNLOAD_ADDR_SUCCESS : int
+          {static} + FILE_DOWNLOAD_FAILED : int
+          {static} + FILE_DOWNLOAD_SUCCESS : int
+          {static} + FILE_MOVE_FAILED : int
+          {static} + FILE_MOVE_SUCCESS : int
+          {static} + FILE_RENAME_FAILED : int
+          {static} + FILE_RENAME_SUCCESS : int
+          {static} + FLUSH_FAILED : int
+          {static} + FLUSH_SUCCESS : int
+          {static} + FOLDER_CREATE_FAILED : int
+          {static} + FOLDER_CREATE_SUCCESS : int
+          {static} + LOGIN_FAILED : int
+          {static} + LOGIN_SUCCESS : int
+          {static} + LOGOUT_FAILED : int
+          {static} + LOGOUT_SUCCESS : int
+          {static} + MESSAGE_SEND_FAILED : int
+          {static} + MESSAGE_SEND_SUCCESS : int
+          {static} + MODIFY_FAILED : int
+          {static} + MODIFY_SUCCESS : int
+          {static} + OFFLINE_ADD_FAILED : int
+          {static} + OFFLINE_ADD_SUCCESS : int
+          {static} + OFFLINE_DEL_FAILED : int
+          {static} + OFFLINE_DEL_SUCCESS : int
+          {static} + OFFLINE_PARSE_FAILED : int
+          {static} + OFFLINE_PARSE_SUCCESS : int
+          {static} + REGISTER_FAILED : int
+          {static} + REGISTER_SUCCESS : int
+          {static} + SUCCESS : int
+          {static} + UPLOAD_FAILED : int
+          {static} + UPLOAD_SUCCESS : int
+          {static} + USERNAME_MODIFY_FAILED : int
+          {static} + USERNAME_MODIFY_SUCCESS : int
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Utils {
+      class cn.cdut.a6pan.Utils.DataBaseHelper {
+          + DataBaseHelper()
+          + onCreate()
+          + onUpgrade()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Utils {
+      class cn.cdut.a6pan.Utils.DownloadUtils {
+          {static} - path : String
+          {static} + createFile()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Utils {
+      abstract class cn.cdut.a6pan.Utils.HttpCallbackListener {
+          + onError()
+          {abstract} + onFinish()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Utils {
+      class cn.cdut.a6pan.Utils.HttpHelper {
+          {static} ~ TAG : String
+          {static} - user : Person
+          {static} + getUser()
+          + postWithFile()
+          {static} + postWithJson()
+          {static} + setUser()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Utils {
+      class cn.cdut.a6pan.Utils.HttpUtils {
+          {static} - BASE_URL : String
+          {static} - TAG : String
+          {static} - USER_AGENT : String
+          - client : OkHttpClient
+          {static} - instance : HttpUtils
+          - token : String
+          + delToken()
+          + delete()
+          + get()
+          + getConentMd5()
+          {static} + getInstance()
+          + getToken()
+          + post()
+          + put()
+          + sendRequestWithCallback()
+          - HttpUtils()
+          {static} - createSSLSocketFactory()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Utils {
+      class cn.cdut.a6pan.Utils.HttpUtils.TrustAllCerts {
+          + checkClientTrusted()
+          + checkServerTrusted()
+          + getAcceptedIssuers()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Utils {
+      class cn.cdut.a6pan.Utils.HttpUtils.TrustAllHostnameVerifier {
+          + verify()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Utils {
+      class cn.cdut.a6pan.Utils.JellyInterpolator {
+          - factor : float
+          + JellyInterpolator()
+          + getInterpolation()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Utils {
+      enum RequestType {
+        DELETE
+        GET
+        POST
+        PUT
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Utils {
+      class cn.cdut.a6pan.Utils.Security {
+          {static} + base64()
+          {static} + md5()
+          {static} + timeStamp()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Utils {
+      class cn.cdut.a6pan.Utils.ServerException {
+          + ServerException()
+      }
+    }
+  }
+  
+
+  namespace cn.cdut.a6pan {
+    namespace Utils {
+      class cn.cdut.a6pan.Utils.StatusBarUtils {
+          {static} + setWindowStatusBarColor()
+      }
+    }
+  }
+  
+
+  cn.cdut.a6pan.Utils.DataBaseHelper -up-|> android.database.sqlite.SQLiteOpenHelper
+  cn.cdut.a6pan.Utils.HttpUtils +-down- cn.cdut.a6pan.Utils.HttpUtils.TrustAllCerts
+  cn.cdut.a6pan.Utils.HttpUtils +-down- cn.cdut.a6pan.Utils.HttpUtils.TrustAllHostnameVerifier
+  cn.cdut.a6pan.Utils.HttpUtils.TrustAllCerts .up.|> javax.net.ssl.X509TrustManager
+  cn.cdut.a6pan.Utils.HttpUtils.TrustAllHostnameVerifier .up.|> javax.net.ssl.HostnameVerifier
+  cn.cdut.a6pan.Utils.JellyInterpolator -up-|> android.view.animation.LinearInterpolator
+  cn.cdut.a6pan.Utils.ServerException -up-|> java.io.IOException
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
